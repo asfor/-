@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{margin-top: 20px;margin-left: 20px;font-family: 微软雅黑;font-size: 14px;}
+		body{margin: 50px 50px;}
+	</style>
+</head>
+<body>
+	<label>测试框:</label><input type='text' id='content'><br>
+	<button id='GETstart'>GET</button><button id='POSTstart'>POST</button>
+	<p id='response'></p>
+
+	<script src="jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		
+		//jQuery封装Ajax
+		$(document).ready(function(){
+			$('#GETstart').click(function(){
+				$.ajax({
+					type:'GET',
+					url:'http://127.0.0.1/test_1.php?number=' + $('#content').val(), //跨域测试
+					datatype:'json',
+					success:function(jsondata){
+						var data = JSON.parse(jsondata);
+	 					$('#response').html(data.msg);
+					},
+					error:function(jqXHR){
+						alert('发生错误:'+jqXHR.status);
+					}
+				});
+			});
+		});
+		
+		//原生Ajax
+		/*var request = new XMLHttpRequest();
+
+		document.getElementById('GETstart').onclick = function(){
+			request.open('GET','test_1.php?number='+document.getElementById('content').value);
+			request.send();
+
+			request.onreadystatechange = function(){
+				if(request.readyState === 4)
+				{
+					if(request.status === 200)
+						{
+							var msg = JSON.parse(request.responseText);
+							document.getElementById('response').innerHTML = msg.msg;
+						}
+					else
+						{alert('发生错误:'+request.status);}
+				}
+			}
+		}
+
+		document.getElementById('POSTstart').onclick = function(){
+			request.open('POST','test_2.php');
+
+			var data = 'number='+document.getElementById('content').value;
+
+			request.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+			request.send(data);
+
+			request.onreadystatechange = function(){
+				if(request.readyState === 4)
+				{
+					if(request.status === 200)
+						{document.getElementById('response').innerHTML = request.responseText;}
+					else
+						{alert('发生错误');}
+				}
+			}
+		}*/
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#form{width: 500px;margin: 90px auto;font-family: 微软雅黑;}
+	input{width: 100px;}
+	</style>
+</head>
+<body>
+	<div id="form">
+		<input type="text" id="num_1">&nbsp;*
+		<input type="text" id="num_2">&nbsp;=
+		<input type="text" id="num_3">&nbsp;
+		<button id="start" onclick="count();">计算进制</button>
+		<div id="result"></div>
+	</div>
+</body>
+<script type="text/javascript">
+	function count(){
+		var num_1 = document.getElementById("num_1").value;
+		var num_2 = document.getElementById("num_2").value;
+		var num_3 = document.getElementById("num_3").value;
+		var cout = document.getElementById("result");
+
+		//清空输出区域
+		cout.innerHTML = "";
+
+		//判断输入是否为数字
+		if(isNaN(num_1) || isNaN(num_2) || isNaN(num_3))
+			return alert("输入参数非法!");
+		
+		var rule;					//进制数
+
+		var length_1 = (num_1 + "").length;
+		var length_2 = (num_2 + "").length;
+		var length_3 = (num_3 + "").length;
+
+		//循环测试2~16进制
+		for(rule = 2; rule <= 16; rule++){
+			var isBreak = false;
+			var sum_1 = 0;	//    num_1     十进制结果
+			var sum_2 = 0;	//    num_2     十进制结果
+			var sum = 0;	//    num_3     十进制结果
+			var resule = 0; //num_1 * num_2 十进制结果
+
+			//循环求和每一位数字
+			for(var digit = 1; digit <= length_3; digit++){
+				//截取每一位数字进行运算
+				var digit_num_1;
+				var digit_num_2;
+				var digit_num_3;
+
+				if(digit <= length_1)	digit_num_1 = num_1.substr(length_1 - digit, 1) - 0;
+				if(digit <= length_2)	digit_num_2 = num_2.substr(length_2 - digit, 1) - 0;
+				digit_num_3 = num_3.substr(length_3 - digit, 1) - 0;
+
+				//判断数字是否大于当前进制的最大数，例：2进制最大为1
+				if(rule < 10){
+					if(rule - 1 < digit_num_1 || rule - 1 < digit_num_2 || rule - 1 < digit_num_3)
+					{isBreak = true;break;}
+				}
+
+				//当前进制下对应的当前位数所对应的十进制数,例:2进制下第3位对应十进制的4
+				var decimal_of_digit = Math.pow(rule, digit - 1);
+
+				if(digit <= length_1)	sum_1 += decimal_of_digit * digit_num_1;
+				if(digit <= length_2)	sum_2 += decimal_of_digit * digit_num_2;
+				sum += decimal_of_digit * digit_num_3;
+			}
+
+			if(isBreak)	continue;
+			resule = sum_1 * sum_2;
+			if(sum == resule){
+				cout.innerHTML += "满足的最小进制为："+rule+"进制";
+				return;
+			}
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>笔记</title>
+	<link rel="stylesheet" type="text/css" href="style/common.css">
+	<link rel="stylesheet" type="text/css" href="style/list.css">
+	<link rel="stylesheet" type="text/css" href="style/icon.css">
+	<script type="text/javascript" src="script/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="script/nav.js"></script>
+	<script type="text/javascript" src="script/list.js"></script>
+</head>
+<body class="blue">
+	<!-- 主题内容 -->
+	<div id="row">
+		<!-- 文章列表 -->
+		<div id="main" role="list of articles">
+			<div class="main-header">
+				<div class="main-header-warp">
+					<i class="icon icon-list"></i>
+					<h2>全部日记</h2>
+				</div>
+			</div>
+			<ul class="main-body">
+				<li>
+					<a>
+						<img src="img/person.png">
+					</a>
+					<div class="main-body-test">
+						<h4><a href="javascript:H_ajax('url',function(jsondata){update(jsondata);});">我是标题！喵~</a></h4>
+						<p>
+							<a class="main-body-classification" href="javascript:;" data="0">分类</a>
+							<span class="main-body-time">2012-09-12</span>
+						</p>
+					</div>
+				</li>
+				<li>
+					<a>
+						<img src="img/person.png">
+					</a>
+					<div class="main-body-test">
+						<h4><a href="javascript:H_ajax('url',function(jsondata){update(jsondata);});">我是标题！喵~</a></h4>
+						<p>
+							<span class="main-body-classification" href="javascript:;" data="0">分类</span>
+							<span class="main-body-time">2012-09-12</span>
+						</p>
+					</div>
+				</li>
+				<li>
+					<a>
+						<img src="img/person.png">
+					</a>
+					<div class="main-body-test">
+						<h4><a href="javascript:H_ajax('url',function(jsondata){update(jsondata);});">我是标题！喵~</a></h4>
+						<p>
+							<span class="main-body-classification" href="javascript:;" data="0">分类</span>
+							<span class="main-body-time">2012-09-12</span>
+						</p>
+					</div>
+				</li>
+				<li>
+					<a>
+						<img src="img/person.png">
+					</a>
+					<div class="main-body-test">
+						<h4><a href="javascript:H_ajax('url',function(jsondata){update(jsondata);});">我是标题！喵~</a></h4>
+						<p>
+							<span class="main-body-classification" data="0">分类</span>
+							<span class="main-body-time">2012-09-12</span>
+						</p>
+					</div>
+				</li>
+			</ul>
+			<div class="main-footer">
+				<ul class="main-footer-warp">
+					<li>&lt;&lt;</li>
+					<li>&lt;</li>
+					<li class="active">1</li>
+					<li>2</li>
+					<li>&gt;</li>
+					<li>&gt;&gt;</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 侧边栏 -->
+		<aside id="aside">
+			<div class="aside-switch">
+				<h4>前后端切换</h4>
+				<img src="img/yubi.jpg" class="r">
+			</div>
+			<div class="aside-classification">
+				<h4>分类列表</h4>
+				<ul>
+					<li>
+						<img src="img/classification/html.jpg" class="aside-classification-img" data="0">
+						<span class="aside-classification-title" data="2">HTML</span><br>
+						<span class="aside-classification-number"><strong>N</strong>条记录</span><br>
+						<div class="mark"></div>
+					</li>
+					<li>
+						<img src="img/classification/css.jpg" class="aside-classification-img" data="1">
+						<span class="aside-classification-title" data="2">CSS</span><br>
+						<span class="aside-classification-number"><strong>N</strong>条记录</span><br>
+						<div class="mark"></div>
+					</li>
+					<li>
+						<img src="img/classification/javascript.jpg" class="aside-classification-img" data="2">
+						<span class="aside-classification-title" data="2">JavaScript</span><br>
+						<span class="aside-classification-number"><strong>N</strong>条记录</span><br>
+						<div class="mark"></div>
+					</li>
+				</ul>
+			</div>
+		</aside>
+	</div>
+</body>
+</html>

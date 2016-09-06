@@ -1,0 +1,60 @@
+*{margin: 0;padding: 0;font-family: 微软雅黑;color: black;}
+/*布局*/
+#game{
+	padding: 0 50px;
+	width: 500px;
+	margin: 30px auto;
+}
+#table{
+	width:400px;
+	height: 600px;
+	border:1px solid #666;
+	overflow: hidden;
+	position: relative;
+}
+#clickArea{
+	width: 100%;
+	height: 150px;
+	position: absolute;
+	bottom: 0px;
+	background-color: #ddd;
+	z-index: 0;
+}
+#info{
+	position: absolute;
+	top:100px;
+	right: 200px;
+	width: 260px;
+}
+.info-box{
+	width: 100%;
+	margin: 30px auto;
+	padding: 30px 9px;
+	box-shadow:0px 0px 10px #666;
+}
+.center{
+	text-align: center;
+}
+p strong{
+	font-size: 35px;
+}
+/*块样式*/
+.block{
+	position: absolute;
+	width: 100px;
+	height: 150px;
+	background-color: #000;
+	z-index: 1;
+	-webkit-transition:all .2s linear;
+}
+/*块定位*/
+.left-move-1{left: 100px;}
+.left-move-2{left: 200px;}
+.left-move-3{left: 300px;}
+
+.height-move-0{top: -150px;}
+.height-move-1{top: 0;}
+.height-move-2{top: 150px;}
+.height-move-3{top: 300px;}
+.height-move-4{top: 450px;}
+.height-move-5{top: 600px;}

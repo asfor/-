@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{margin: 0;padding: 0;}
+	ul{list-style: none;color: #fff;}
+	li{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		width: 100px;
+		background-color: #333;
+		text-align: center;
+	}
+	#one > li{
+		float: left;
+		cursor: pointer;
+		display: inline-block;
+		border-left: 1px #fff solid;
+	}
+	#one > li:first-child{border-left: 0px;}
+	.display{display: black;}
+	.hidden{display: none;}
+	.two > li{border-top: 1px #fff solid;}
+	.two > li:first-child{margin-top: 10px;}
+	.last-child{padding-bottom: 0px;}
+	</style>
+</head>
+<body>
+	<div>
+		<ul id="one">
+			<li>
+				asd
+				<ul class="two hidden">
+					<li>a</li>
+					<li>s</li>
+					<li class="last-child">d</li>
+				</ul>
+			</li>
+			<li>123</li>
+			<li>aoe</li>
+		</ul>
+	</div>
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#one > li').hover(function(){
+			$(this).find('.two').removeClass().addClass("two display");
+		}, function(){
+			$(this).find('.two').removeClass().addClass("two hidden");
+		});
+	});
+</script>
+</html>

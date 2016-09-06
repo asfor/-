@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bing</title>
+	<style type="text/css">
+		body{background-color: #333;}
+		#warp{
+			background-image: url(img/river.jpg);
+			width: 1228px;
+			height: 690px;
+			margin:0 auto;
+		}
+		.search-box{
+			position: relative;
+			left: 50%;
+			margin-left: -248px;
+			top:30%;
+		}
+		.logo{
+			display:inline-block;
+			background-image: url(img/logo.png);
+			width: 107px;
+			height: 53px;
+			margin: -4px 15px 0 0;
+			float: left;
+		}
+		#search{
+			padding: 5px;
+			background-color: #fff;
+			float: left;
+			height: 30px;
+		}
+		input{border: 0;}
+		.con{
+			float: left;
+			width: 350px;
+			height: 27px;
+			line-height: 27px;
+			font-size: 17px;
+			outline: none;
+		}
+		.ok{
+			background-image: url(img/search-button.png);
+			width: 29px;
+			height: 29px;
+			float: left;
+			cursor: pointer;
+		}
+		#suggest{
+			background-color: #fff;
+			width: 388px;
+			border: solid 1px #999;
+			display: none;
+		}
+		#suggest ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		#suggest ul li{
+			padding: 5px;
+			font-size: 16px;
+			line-height: 25px;
+			cursor: pointer;
+		}
+		#suggest ul li:hover{
+			background-color: #ccc;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<div id="warp">
+		<article class="search-box">
+			<span class="logo"></span>
+			<form id="search">
+				<input type="text" class="con">
+				<input type="submit" class="ok" value="">
+			</form>
+		</article>
+
+		<article id="suggest">
+			<ul></ul>
+		</article>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		//js实现
+		var obj = document.getElementById('search');
+		if(obj.addEventListener){
+			obj.addEventListener("keyup",fun,false);
+		} else if (obj.attachListener){
+			obj.attachListener("onkeyup",fun);
+		}
+
+		function fun(){
+
+		}
+
+		//Jquery 实现
+		// $("#search").bind("keyup",function(){
+		// 	$.ajax({
+		// 		type:"GET",
+		// 		url:"test.php",
+		// 		datatype:"json",
+		// 		success:function(jsondata){
+		// 			var data = JSON.parse(jsondata);
+		// 			var html = "";
+
+		// 			for(var i=0;i<data.just.length;i++)
+		// 			{html += "<li>" + data.just[i].linbei + "</li>";}
+		// 			//console.log(html);
+		// 			$("#suggest ul").html(html);
+
+		// 			$("#suggest").show().css({
+		// 				position:"absolute",
+		// 				left:$("#search").offset().left,
+		// 				top:$("#search").offset().top + $("#search").height() + 10
+		// 			});
+
+		// 			$("#suggest ul").delegate("li","click",function(){
+		// 				var con = $(this).text();
+		// 				$("#search input[type=text]").val(con);
+		// 			});
+		// 		}
+		// 	});
+		// });
+
+		// $(document).bind("click",function(){
+		// 	$("#suggest").hide();
+		// });
+	</script>
+</body>
+</html>

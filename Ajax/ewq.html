@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#warp{
+			width: 400px;
+			height: 400px;
+			margin: 150px auto;
+			position: relative;
+		}
+		.child{
+			position: absolute;
+			border-radius: 300px;
+			-webkit-transition: all 1s linear;
+		}
+
+		.one_big{width: 250px;height: 250px;background-color: #0066cc;left: 0;top:75px;}
+		.one_small{width: 150px;height: 150px;background-color: #0066cc;left: 0;top:125px;}
+
+		.two_small{width: 150px;height: 150px;background-color: #ffaa44;right: 0;top:125px;}
+		.two_big{width: 250px;height: 250px;background-color: #ffaa44;right: 0;top:75px;}
+
+
+	</style>
+	<script type="text/javascript">
+		function construct(){
+			this.html = "<article id='warp'><section id='one' class='child one_big'></section><section id='two' class='child two_small'></section></article>";
+			this.i = 0;
+
+			this.run();
+		}
+
+		construct.prototype.run = function(){
+			document.body.innerHTML += this.html;
+
+			this.one = document.getElementById('one');
+			this.two = document.getElementById('two');
+			
+			var me = this;
+			setInterval(function(){me.tiao(me.i);},1000);
+		}
+
+		construct.prototype.tiao = function(index){
+			if(index % 2 == 0){
+				this.one.className = 'child one_small';
+				this.two.className = 'child two_big';
+			} else {
+				this.one.className = 'child one_big';
+				this.two.className = 'child two_small';
+			}
+			this.i++;
+		}
+
+		window.onload = function(){var start = new construct();}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

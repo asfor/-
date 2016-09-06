@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>别踩白块儿</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="jquery-1.11.2.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<article id='game' role='game-main'>
+		<div id="table">
+			<div id="block-0" class="block left-move-1 height-move-0"></div>
+			<div id="block-1" class="block left-move-0 height-move-1"></div>
+			<div id="block-2" class="block left-move-1 height-move-2"></div>
+			<div id="block-3" class="block left-move-2 height-move-3"></div>
+			<div id="block-4" class="block left-move-3 height-move-4"></div>
+			<div id="block-5" class="block left-move-2 height-move-5"></div>
+			<div id='clickArea'></div>
+		</div>
+	</article>
+	<aside id='info' role='game-info'>
+		<div id='rest' class='info-box center' role='rest-block'>
+			<p id='rest-p'><strong>剩余块数：50</strong></p>
+		</div>
+		<div id='rule' class='info-box' role='game-rule'>
+			<p>游戏说明：</p>
+			<p>从左到右，对应的按键为 S D J K</p>
+			<p>踩完50块黑块或踩到白块时游戏结束</p>
+		</div>
+		<div id='score' class='info-box center' role='game-score'>
+			<p id='score-p'>成绩：<strong>0s</strong></p>
+		</div>
+	</aside>
+</body>
+</html>

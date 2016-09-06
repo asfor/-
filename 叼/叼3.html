@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+    html, body {
+  		height: 100%;
+	}
+
+	body {
+	  overflow: hidden;
+	  background: #23211e;
+	}
+	body * {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	}
+
+	.container {
+	  font-size: 40px;
+	  perspective: 8em;
+	  transform-style: preserve-3d;
+	  transform: translateY(-1em);
+	}
+
+	.ball {
+	  width: 1em;
+	  height: 1em;
+	  border-radius: 50%;
+	}
+	.ball:nth-child(1) {
+	  background: #f20d0d;
+	  animation: ball0 0.633s steps(19) infinite;
+	}
+	@keyframes ball0 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(0deg) translateX(3.1em) rotateZ(0deg) translateX(0.8em) rotateZ(0deg) rotateY(0deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(0deg) translateX(3.1em) rotateZ(0deg) translateX(0.8em) rotateZ(0deg) rotateY(0deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(2) {
+	  background: #f2240d;
+	  animation: ball1 0.633s steps(19) infinite;
+	}
+	@keyframes ball1 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-18deg) translateX(3.1em) rotateZ(6deg) translateX(0.8em) rotateZ(-6deg) rotateY(18deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-18deg) translateX(3.1em) rotateZ(6deg) translateX(0.8em) rotateZ(-6deg) rotateY(18deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(3) {
+	  background: #f23b0d;
+	  animation: ball2 0.633s steps(19) infinite;
+	}
+	@keyframes ball2 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-36deg) translateX(3.1em) rotateZ(12deg) translateX(0.8em) rotateZ(-12deg) rotateY(36deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-36deg) translateX(3.1em) rotateZ(12deg) translateX(0.8em) rotateZ(-12deg) rotateY(36deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(4) {
+	  background: #f2520d;
+	  animation: ball3 0.633s steps(19) infinite;
+	}
+	@keyframes ball3 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-54deg) translateX(3.1em) rotateZ(18deg) translateX(0.8em) rotateZ(-18deg) rotateY(54deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-54deg) translateX(3.1em) rotateZ(18deg) translateX(0.8em) rotateZ(-18deg) rotateY(54deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(5) {
+	  background: #f2690d;
+	  animation: ball4 0.633s steps(19) infinite;
+	}
+	@keyframes ball4 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-72deg) translateX(3.1em) rotateZ(24deg) translateX(0.8em) rotateZ(-24deg) rotateY(72deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-72deg) translateX(3.1em) rotateZ(24deg) translateX(0.8em) rotateZ(-24deg) rotateY(72deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(6) {
+	  background: #f2800d;
+	  animation: ball5 0.633s steps(19) infinite;
+	}
+	@keyframes ball5 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-90deg) translateX(3.1em) rotateZ(30deg) translateX(0.8em) rotateZ(-30deg) rotateY(90deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-90deg) translateX(3.1em) rotateZ(30deg) translateX(0.8em) rotateZ(-30deg) rotateY(90deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(7) {
+	  background: #f2960d;
+	  animation: ball6 0.633s steps(19) infinite;
+	}
+	@keyframes ball6 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-108deg) translateX(3.1em) rotateZ(36deg) translateX(0.8em) rotateZ(-36deg) rotateY(108deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-108deg) translateX(3.1em) rotateZ(36deg) translateX(0.8em) rotateZ(-36deg) rotateY(108deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(8) {
+	  background: #f2ad0d;
+	  animation: ball7 0.633s steps(19) infinite;
+	}
+	@keyframes ball7 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-126deg) translateX(3.1em) rotateZ(42deg) translateX(0.8em) rotateZ(-42deg) rotateY(126deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-126deg) translateX(3.1em) rotateZ(42deg) translateX(0.8em) rotateZ(-42deg) rotateY(126deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(9) {
+	  background: #f2c40d;
+	  animation: ball8 0.633s steps(19) infinite;
+	}
+	@keyframes ball8 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-144deg) translateX(3.1em) rotateZ(48deg) translateX(0.8em) rotateZ(-48deg) rotateY(144deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-144deg) translateX(3.1em) rotateZ(48deg) translateX(0.8em) rotateZ(-48deg) rotateY(144deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(10) {
+	  background: #f2db0d;
+	  animation: ball9 0.633s steps(19) infinite;
+	}
+	@keyframes ball9 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-162deg) translateX(3.1em) rotateZ(54deg) translateX(0.8em) rotateZ(-54deg) rotateY(162deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-162deg) translateX(3.1em) rotateZ(54deg) translateX(0.8em) rotateZ(-54deg) rotateY(162deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(11) {
+	  background: #f2f20d;
+	  animation: ball10 0.633s steps(19) infinite;
+	}
+	@keyframes ball10 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-180deg) translateX(3.1em) rotateZ(60deg) translateX(0.8em) rotateZ(-60deg) rotateY(180deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-180deg) translateX(3.1em) rotateZ(60deg) translateX(0.8em) rotateZ(-60deg) rotateY(180deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(12) {
+	  background: #dbf20d;
+	  animation: ball11 0.633s steps(19) infinite;
+	}
+	@keyframes ball11 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-198deg) translateX(3.1em) rotateZ(66deg) translateX(0.8em) rotateZ(-66deg) rotateY(198deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-198deg) translateX(3.1em) rotateZ(66deg) translateX(0.8em) rotateZ(-66deg) rotateY(198deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(13) {
+	  background: #c4f20d;
+	  animation: ball12 0.633s steps(19) infinite;
+	}
+	@keyframes ball12 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-216deg) translateX(3.1em) rotateZ(72deg) translateX(0.8em) rotateZ(-72deg) rotateY(216deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-216deg) translateX(3.1em) rotateZ(72deg) translateX(0.8em) rotateZ(-72deg) rotateY(216deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(14) {
+	  background: #adf20d;
+	  animation: ball13 0.633s steps(19) infinite;
+	}
+	@keyframes ball13 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-234deg) translateX(3.1em) rotateZ(78deg) translateX(0.8em) rotateZ(-78deg) rotateY(234deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-234deg) translateX(3.1em) rotateZ(78deg) translateX(0.8em) rotateZ(-78deg) rotateY(234deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(15) {
+	  background: #96f20d;
+	  animation: ball14 0.633s steps(19) infinite;
+	}
+	@keyframes ball14 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-252deg) translateX(3.1em) rotateZ(84deg) translateX(0.8em) rotateZ(-84deg) rotateY(252deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-252deg) translateX(3.1em) rotateZ(84deg) translateX(0.8em) rotateZ(-84deg) rotateY(252deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(16) {
+	  background: #80f20d;
+	  animation: ball15 0.633s steps(19) infinite;
+	}
+	@keyframes ball15 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-270deg) translateX(3.1em) rotateZ(90deg) translateX(0.8em) rotateZ(-90deg) rotateY(270deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-270deg) translateX(3.1em) rotateZ(90deg) translateX(0.8em) rotateZ(-90deg) rotateY(270deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(17) {
+	  background: #69f20d;
+	  animation: ball16 0.633s steps(19) infinite;
+	}
+	@keyframes ball16 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-288deg) translateX(3.1em) rotateZ(96deg) translateX(0.8em) rotateZ(-96deg) rotateY(288deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-288deg) translateX(3.1em) rotateZ(96deg) translateX(0.8em) rotateZ(-96deg) rotateY(288deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(18) {
+	  background: #52f20d;
+	  animation: ball17 0.633s steps(19) infinite;
+	}
+	@keyframes ball17 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-306deg) translateX(3.1em) rotateZ(102deg) translateX(0.8em) rotateZ(-102deg) rotateY(306deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-306deg) translateX(3.1em) rotateZ(102deg) translateX(0.8em) rotateZ(-102deg) rotateY(306deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(19) {
+	  background: #3bf20d;
+	  animation: ball18 0.633s steps(19) infinite;
+	}
+	@keyframes ball18 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-324deg) translateX(3.1em) rotateZ(108deg) translateX(0.8em) rotateZ(-108deg) rotateY(324deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-324deg) translateX(3.1em) rotateZ(108deg) translateX(0.8em) rotateZ(-108deg) rotateY(324deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(20) {
+	  background: #24f20d;
+	  animation: ball19 0.633s steps(19) infinite;
+	}
+	@keyframes ball19 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-342deg) translateX(3.1em) rotateZ(114deg) translateX(0.8em) rotateZ(-114deg) rotateY(342deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-342deg) translateX(3.1em) rotateZ(114deg) translateX(0.8em) rotateZ(-114deg) rotateY(342deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(21) {
+	  background: #0df20d;
+	  animation: ball20 0.633s steps(19) infinite;
+	}
+	@keyframes ball20 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-360deg) translateX(3.1em) rotateZ(120deg) translateX(0.8em) rotateZ(-120deg) rotateY(360deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-360deg) translateX(3.1em) rotateZ(120deg) translateX(0.8em) rotateZ(-120deg) rotateY(360deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(22) {
+	  background: #0df224;
+	  animation: ball21 0.633s steps(19) infinite;
+	}
+	@keyframes ball21 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-378deg) translateX(3.1em) rotateZ(126deg) translateX(0.8em) rotateZ(-126deg) rotateY(378deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-378deg) translateX(3.1em) rotateZ(126deg) translateX(0.8em) rotateZ(-126deg) rotateY(378deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(23) {
+	  background: #0df23b;
+	  animation: ball22 0.633s steps(19) infinite;
+	}
+	@keyframes ball22 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-396deg) translateX(3.1em) rotateZ(132deg) translateX(0.8em) rotateZ(-132deg) rotateY(396deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-396deg) translateX(3.1em) rotateZ(132deg) translateX(0.8em) rotateZ(-132deg) rotateY(396deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(24) {
+	  background: #0df252;
+	  animation: ball23 0.633s steps(19) infinite;
+	}
+	@keyframes ball23 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-414deg) translateX(3.1em) rotateZ(138deg) translateX(0.8em) rotateZ(-138deg) rotateY(414deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-414deg) translateX(3.1em) rotateZ(138deg) translateX(0.8em) rotateZ(-138deg) rotateY(414deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(25) {
+	  background: #0df269;
+	  animation: ball24 0.633s steps(19) infinite;
+	}
+	@keyframes ball24 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-432deg) translateX(3.1em) rotateZ(144deg) translateX(0.8em) rotateZ(-144deg) rotateY(432deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-432deg) translateX(3.1em) rotateZ(144deg) translateX(0.8em) rotateZ(-144deg) rotateY(432deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(26) {
+	  background: #0df280;
+	  animation: ball25 0.633s steps(19) infinite;
+	}
+	@keyframes ball25 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-450deg) translateX(3.1em) rotateZ(150deg) translateX(0.8em) rotateZ(-150deg) rotateY(450deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-450deg) translateX(3.1em) rotateZ(150deg) translateX(0.8em) rotateZ(-150deg) rotateY(450deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(27) {
+	  background: #0df296;
+	  animation: ball26 0.633s steps(19) infinite;
+	}
+	@keyframes ball26 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-468deg) translateX(3.1em) rotateZ(156deg) translateX(0.8em) rotateZ(-156deg) rotateY(468deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-468deg) translateX(3.1em) rotateZ(156deg) translateX(0.8em) rotateZ(-156deg) rotateY(468deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(28) {
+	  background: #0df2ad;
+	  animation: ball27 0.633s steps(19) infinite;
+	}
+	@keyframes ball27 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-486deg) translateX(3.1em) rotateZ(162deg) translateX(0.8em) rotateZ(-162deg) rotateY(486deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-486deg) translateX(3.1em) rotateZ(162deg) translateX(0.8em) rotateZ(-162deg) rotateY(486deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(29) {
+	  background: #0df2c4;
+	  animation: ball28 0.633s steps(19) infinite;
+	}
+	@keyframes ball28 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-504deg) translateX(3.1em) rotateZ(168deg) translateX(0.8em) rotateZ(-168deg) rotateY(504deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-504deg) translateX(3.1em) rotateZ(168deg) translateX(0.8em) rotateZ(-168deg) rotateY(504deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(30) {
+	  background: #0df2db;
+	  animation: ball29 0.633s steps(19) infinite;
+	}
+	@keyframes ball29 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-522deg) translateX(3.1em) rotateZ(174deg) translateX(0.8em) rotateZ(-174deg) rotateY(522deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-522deg) translateX(3.1em) rotateZ(174deg) translateX(0.8em) rotateZ(-174deg) rotateY(522deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(31) {
+	  background: #0df2f2;
+	  animation: ball30 0.633s steps(19) infinite;
+	}
+	@keyframes ball30 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-540deg) translateX(3.1em) rotateZ(180deg) translateX(0.8em) rotateZ(-180deg) rotateY(540deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-540deg) translateX(3.1em) rotateZ(180deg) translateX(0.8em) rotateZ(-180deg) rotateY(540deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(32) {
+	  background: #0ddbf2;
+	  animation: ball31 0.633s steps(19) infinite;
+	}
+	@keyframes ball31 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-558deg) translateX(3.1em) rotateZ(186deg) translateX(0.8em) rotateZ(-186deg) rotateY(558deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-558deg) translateX(3.1em) rotateZ(186deg) translateX(0.8em) rotateZ(-186deg) rotateY(558deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(33) {
+	  background: #0dc4f2;
+	  animation: ball32 0.633s steps(19) infinite;
+	}
+	@keyframes ball32 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-576deg) translateX(3.1em) rotateZ(192deg) translateX(0.8em) rotateZ(-192deg) rotateY(576deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-576deg) translateX(3.1em) rotateZ(192deg) translateX(0.8em) rotateZ(-192deg) rotateY(576deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(34) {
+	  background: #0dadf2;
+	  animation: ball33 0.633s steps(19) infinite;
+	}
+	@keyframes ball33 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-594deg) translateX(3.1em) rotateZ(198deg) translateX(0.8em) rotateZ(-198deg) rotateY(594deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-594deg) translateX(3.1em) rotateZ(198deg) translateX(0.8em) rotateZ(-198deg) rotateY(594deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(35) {
+	  background: #0d96f2;
+	  animation: ball34 0.633s steps(19) infinite;
+	}
+	@keyframes ball34 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-612deg) translateX(3.1em) rotateZ(204deg) translateX(0.8em) rotateZ(-204deg) rotateY(612deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-612deg) translateX(3.1em) rotateZ(204deg) translateX(0.8em) rotateZ(-204deg) rotateY(612deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(36) {
+	  background: #0d80f2;
+	  animation: ball35 0.633s steps(19) infinite;
+	}
+	@keyframes ball35 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-630deg) translateX(3.1em) rotateZ(210deg) translateX(0.8em) rotateZ(-210deg) rotateY(630deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-630deg) translateX(3.1em) rotateZ(210deg) translateX(0.8em) rotateZ(-210deg) rotateY(630deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(37) {
+	  background: #0d69f2;
+	  animation: ball36 0.633s steps(19) infinite;
+	}
+	@keyframes ball36 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-648deg) translateX(3.1em) rotateZ(216deg) translateX(0.8em) rotateZ(-216deg) rotateY(648deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-648deg) translateX(3.1em) rotateZ(216deg) translateX(0.8em) rotateZ(-216deg) rotateY(648deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(38) {
+	  background: #0d52f2;
+	  animation: ball37 0.633s steps(19) infinite;
+	}
+	@keyframes ball37 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-666deg) translateX(3.1em) rotateZ(222deg) translateX(0.8em) rotateZ(-222deg) rotateY(666deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-666deg) translateX(3.1em) rotateZ(222deg) translateX(0.8em) rotateZ(-222deg) rotateY(666deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(39) {
+	  background: #0d3bf2;
+	  animation: ball38 0.633s steps(19) infinite;
+	}
+	@keyframes ball38 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-684deg) translateX(3.1em) rotateZ(228deg) translateX(0.8em) rotateZ(-228deg) rotateY(684deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-684deg) translateX(3.1em) rotateZ(228deg) translateX(0.8em) rotateZ(-228deg) rotateY(684deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(40) {
+	  background: #0d24f2;
+	  animation: ball39 0.633s steps(19) infinite;
+	}
+	@keyframes ball39 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-702deg) translateX(3.1em) rotateZ(234deg) translateX(0.8em) rotateZ(-234deg) rotateY(702deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-702deg) translateX(3.1em) rotateZ(234deg) translateX(0.8em) rotateZ(-234deg) rotateY(702deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(41) {
+	  background: #0d0df2;
+	  animation: ball40 0.633s steps(19) infinite;
+	}
+	@keyframes ball40 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-720deg) translateX(3.1em) rotateZ(240deg) translateX(0.8em) rotateZ(-240deg) rotateY(720deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-720deg) translateX(3.1em) rotateZ(240deg) translateX(0.8em) rotateZ(-240deg) rotateY(720deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(42) {
+	  background: #240df2;
+	  animation: ball41 0.633s steps(19) infinite;
+	}
+	@keyframes ball41 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-738deg) translateX(3.1em) rotateZ(246deg) translateX(0.8em) rotateZ(-246deg) rotateY(738deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-738deg) translateX(3.1em) rotateZ(246deg) translateX(0.8em) rotateZ(-246deg) rotateY(738deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(43) {
+	  background: #3b0df2;
+	  animation: ball42 0.633s steps(19) infinite;
+	}
+	@keyframes ball42 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-756deg) translateX(3.1em) rotateZ(252deg) translateX(0.8em) rotateZ(-252deg) rotateY(756deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-756deg) translateX(3.1em) rotateZ(252deg) translateX(0.8em) rotateZ(-252deg) rotateY(756deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(44) {
+	  background: #520df2;
+	  animation: ball43 0.633s steps(19) infinite;
+	}
+	@keyframes ball43 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-774deg) translateX(3.1em) rotateZ(258deg) translateX(0.8em) rotateZ(-258deg) rotateY(774deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-774deg) translateX(3.1em) rotateZ(258deg) translateX(0.8em) rotateZ(-258deg) rotateY(774deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(45) {
+	  background: #690df2;
+	  animation: ball44 0.633s steps(19) infinite;
+	}
+	@keyframes ball44 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-792deg) translateX(3.1em) rotateZ(264deg) translateX(0.8em) rotateZ(-264deg) rotateY(792deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-792deg) translateX(3.1em) rotateZ(264deg) translateX(0.8em) rotateZ(-264deg) rotateY(792deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(46) {
+	  background: #800df2;
+	  animation: ball45 0.633s steps(19) infinite;
+	}
+	@keyframes ball45 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-810deg) translateX(3.1em) rotateZ(270deg) translateX(0.8em) rotateZ(-270deg) rotateY(810deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-810deg) translateX(3.1em) rotateZ(270deg) translateX(0.8em) rotateZ(-270deg) rotateY(810deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(47) {
+	  background: #960df2;
+	  animation: ball46 0.633s steps(19) infinite;
+	}
+	@keyframes ball46 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-828deg) translateX(3.1em) rotateZ(276deg) translateX(0.8em) rotateZ(-276deg) rotateY(828deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-828deg) translateX(3.1em) rotateZ(276deg) translateX(0.8em) rotateZ(-276deg) rotateY(828deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(48) {
+	  background: #ad0df2;
+	  animation: ball47 0.633s steps(19) infinite;
+	}
+	@keyframes ball47 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-846deg) translateX(3.1em) rotateZ(282deg) translateX(0.8em) rotateZ(-282deg) rotateY(846deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-846deg) translateX(3.1em) rotateZ(282deg) translateX(0.8em) rotateZ(-282deg) rotateY(846deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(49) {
+	  background: #c40df2;
+	  animation: ball48 0.633s steps(19) infinite;
+	}
+	@keyframes ball48 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-864deg) translateX(3.1em) rotateZ(288deg) translateX(0.8em) rotateZ(-288deg) rotateY(864deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-864deg) translateX(3.1em) rotateZ(288deg) translateX(0.8em) rotateZ(-288deg) rotateY(864deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(50) {
+	  background: #db0df2;
+	  animation: ball49 0.633s steps(19) infinite;
+	}
+	@keyframes ball49 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-882deg) translateX(3.1em) rotateZ(294deg) translateX(0.8em) rotateZ(-294deg) rotateY(882deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-882deg) translateX(3.1em) rotateZ(294deg) translateX(0.8em) rotateZ(-294deg) rotateY(882deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(51) {
+	  background: #f20df2;
+	  animation: ball50 0.633s steps(19) infinite;
+	}
+	@keyframes ball50 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-900deg) translateX(3.1em) rotateZ(300deg) translateX(0.8em) rotateZ(-300deg) rotateY(900deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-900deg) translateX(3.1em) rotateZ(300deg) translateX(0.8em) rotateZ(-300deg) rotateY(900deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(52) {
+	  background: #f20ddb;
+	  animation: ball51 0.633s steps(19) infinite;
+	}
+	@keyframes ball51 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-918deg) translateX(3.1em) rotateZ(306deg) translateX(0.8em) rotateZ(-306deg) rotateY(918deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-918deg) translateX(3.1em) rotateZ(306deg) translateX(0.8em) rotateZ(-306deg) rotateY(918deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(53) {
+	  background: #f20dc4;
+	  animation: ball52 0.633s steps(19) infinite;
+	}
+	@keyframes ball52 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-936deg) translateX(3.1em) rotateZ(312deg) translateX(0.8em) rotateZ(-312deg) rotateY(936deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-936deg) translateX(3.1em) rotateZ(312deg) translateX(0.8em) rotateZ(-312deg) rotateY(936deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(54) {
+	  background: #f20dad;
+	  animation: ball53 0.633s steps(19) infinite;
+	}
+	@keyframes ball53 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-954deg) translateX(3.1em) rotateZ(318deg) translateX(0.8em) rotateZ(-318deg) rotateY(954deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-954deg) translateX(3.1em) rotateZ(318deg) translateX(0.8em) rotateZ(-318deg) rotateY(954deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(55) {
+	  background: #f20d96;
+	  animation: ball54 0.633s steps(19) infinite;
+	}
+	@keyframes ball54 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-972deg) translateX(3.1em) rotateZ(324deg) translateX(0.8em) rotateZ(-324deg) rotateY(972deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-972deg) translateX(3.1em) rotateZ(324deg) translateX(0.8em) rotateZ(-324deg) rotateY(972deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(56) {
+	  background: #f20d80;
+	  animation: ball55 0.633s steps(19) infinite;
+	}
+	@keyframes ball55 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-990deg) translateX(3.1em) rotateZ(330deg) translateX(0.8em) rotateZ(-330deg) rotateY(990deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-990deg) translateX(3.1em) rotateZ(330deg) translateX(0.8em) rotateZ(-330deg) rotateY(990deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(57) {
+	  background: #f20d69;
+	  animation: ball56 0.633s steps(19) infinite;
+	}
+	@keyframes ball56 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-1008deg) translateX(3.1em) rotateZ(336deg) translateX(0.8em) rotateZ(-336deg) rotateY(1008deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-1008deg) translateX(3.1em) rotateZ(336deg) translateX(0.8em) rotateZ(-336deg) rotateY(1008deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(58) {
+	  background: #f20d52;
+	  animation: ball57 0.633s steps(19) infinite;
+	}
+	@keyframes ball57 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-1026deg) translateX(3.1em) rotateZ(342deg) translateX(0.8em) rotateZ(-342deg) rotateY(1026deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-1026deg) translateX(3.1em) rotateZ(342deg) translateX(0.8em) rotateZ(-342deg) rotateY(1026deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(59) {
+	  background: #f20d3b;
+	  animation: ball58 0.633s steps(19) infinite;
+	}
+	@keyframes ball58 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-1044deg) translateX(3.1em) rotateZ(348deg) translateX(0.8em) rotateZ(-348deg) rotateY(1044deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-1044deg) translateX(3.1em) rotateZ(348deg) translateX(0.8em) rotateZ(-348deg) rotateY(1044deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+	.ball:nth-child(60) {
+	  background: #f20d24;
+	  animation: ball59 0.633s steps(19) infinite;
+	}
+	@keyframes ball59 {
+	  from {
+	    transform: rotateX(-45deg) rotateY(0deg) rotateY(-1062deg) translateX(3.1em) rotateZ(354deg) translateX(0.8em) rotateZ(-354deg) rotateY(1062deg) rotateY(0deg) rotateX(45deg);
+	  }
+	  to {
+	    transform: rotateX(-45deg) rotateY(360deg) rotateY(-1062deg) translateX(3.1em) rotateZ(354deg) translateX(0.8em) rotateZ(-354deg) rotateY(1062deg) rotateY(-360deg) rotateX(45deg);
+	  }
+	}
+
+    </style>
+</head>
+<body translate="no">
+
+    <div class="container">
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+</div> 
+</body>
+</html>

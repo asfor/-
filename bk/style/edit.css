@@ -1,0 +1,23 @@
+body{min-height: 600px;background-color: #4cae4c;font-family: 微软雅黑;}
+
+#warp{
+	position: relative;
+	width: 958px;
+	margin: 30px auto 0 auto;
+}
+
+#submit{
+	position: absolute;
+	bottom: -47px;
+	left: 0;
+	width: 100px;
+	height: 32px;
+	border-width: 0;
+	background-color: #fff;
+	color: #000;
+	font-size: 14px;
+	outline: none;
+	cursor: pointer;
+	border-radius: 3px;
+}
+#submit:hover{background-color: #eee;}

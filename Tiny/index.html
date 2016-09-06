@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body{padding-top: 10px;}
+		#bg{
+			position: relative;
+			height: 600px;
+			width: 800px;
+			margin: 0 auto;
+		}
+		#play{
+			position: absolute;
+			bottom: 110px;
+			left: 360px;
+			cursor: pointer;
+			transition:all .3s linear;
+			-o-transition:all .3s linear;
+			-moz-transition:all .3s linear;
+			-webkit-transition:all .3s linear;
+		}
+		#play:hover{
+			transform:scale(1.5);
+			-o-transform:scale(1.5);
+			-moz-transform:scale(1.5);
+			-webkit-transform:scale(1.5);
+		}
+	</style>
+</head>
+<body>
+	<div id="bg">
+		<img id="cover" src="src/cover.png">
+		<img id="play" src="src/play.png" onclick="start()">
+	</div>
+</body>
+<script type="text/javascript">
+	function start(){window.location.href = "content.html";}
+</script>
+</html>
+
+		

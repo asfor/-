@@ -1,0 +1,194 @@
+*{margin: 0;padding: 0;font-family: 微软雅黑;color: #000;}
+body{
+	background: #000;
+	min-width: 1200px;
+	min-height: 600px;
+}
+span{display: inline-block;position: absolute;}
+#warp{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -600px;
+	margin-top: -300px;
+	width: 1200px;
+	height: 600px;
+	background: url(img/bg.jpg) no-repeat;
+}
+/*粽子盒子*/
+#zongzi{
+	position: absolute;
+	left: 700px;
+	top: 200px;
+	width: 312px;
+	height: 305px;
+	cursor: pointer;
+	-webkit-animation:duang infinite 3s linear;
+}
+/*文字盒子*/
+#word{
+	position: absolute;
+	width: 400px;
+	min-height: 240px;
+}
+/*粽子*/
+.zongzi{
+	width: 312px;
+	height: 305px;
+	background: url(img/zz.png) no-repeat;
+	-webkit-transition: all 1s ease-out;
+}
+/*粽子带子*/
+.line{left: 10px;-webkit-transition: all .3s ease-out;}
+.line-1{
+	width: 218px;
+	height: 180px;
+	background: url(img/line_1.png) no-repeat 100% 100%;
+	top: 120px;
+	cursor: pointer;
+}
+.line-2{
+	width: 219px;
+	height: 159px;
+	background: url(img/line_2.png) no-repeat 100% 100%;
+	top: 177px;
+	opacity: 0;
+}
+.line-3{
+	width: 264px;
+	height: 117px;
+	background: url(img/line_3.png) no-repeat 100% 100%;
+	top: 233px;
+	opacity: 0;
+}
+.line-4{
+	width: 288px;
+	height: 56px;
+	background: url(img/line_4.png) no-repeat 100% 100%;
+	top: 290px;
+	opacity: 0;
+}
+/*粽子肉*/
+.rou{
+	position: absolute;
+	z-index: 101;
+	-webkit-transition: all .6s ease-out;
+	-webkit-transform:scale(.8);
+	opacity: 0;
+}
+.zongzirou-1{
+	width: 282px;
+	height: 206px;
+	background: url(img/zzr_1.png) no-repeat 100% 100%;
+	left: 40px;
+	top: 44px;
+}
+.zongzirou-2{
+	width: 273px;
+	height: 234px;
+	background: url(img/zzr_2.png) no-repeat 100% 100%;
+	left: 40px;
+	top: 44px;
+}
+.zongzirou-3{
+	width: 267px;
+	height: 239px;
+	background: url(img/zzr_3.png) no-repeat 100% 100%;
+	left: 40px;
+	top: 44px;
+}
+.zongzirou-4{
+	width: 272px;
+	height: 237px;
+	background: url(img/zzr_4.png) no-repeat 100% 100%;
+	left: 40px;
+	top: 44px;
+}
+/*左叶子*/
+.left-leaf{
+	width: 147px;
+	height: 266px;
+	background: url(img/leaf_left.png) no-repeat 100% 100%;
+	position: absolute;
+	left: -8px;
+	top: -50px;
+	z-index: 100;
+	opacity: 0;
+	-webkit-transition: all .6s ease-out;
+	-webkit-transform:rotate(15deg);
+}
+/*右叶子*/
+.right-leaf{
+	width: 318px;
+	height: 338px;
+	background: url(img/leaf_right.png) no-repeat 100% 100%;
+	position: absolute;
+	left: 80px;
+	top: -60px;
+	z-index: 110;
+	opacity: 0;
+	-webkit-transition: all .6s ease-out;
+	-webkit-transform:rotate(-15deg);
+}
+/*底叶*/
+.bottom-leaf{
+	width: 618px;
+	height: 468px;
+	background: url(img/leaf_expand.png) no-repeat 100% 100%;
+	position: absolute;
+	left: -140px;
+	top: -45px;
+	z-index: 10;
+	opacity: 0;
+	-webkit-transition: all .6s ease-out;
+}
+#zongzi .text{
+	width: 180px;
+	height: 100px;
+	background: url(img/t_jixiang.png);
+	left: 85px;
+	top: 115px;
+	z-index: 111;
+	-webkit-transform:scale(.8);
+	-webkit-transition: all .6s ease-out;
+	opacity: 0;
+}
+#word .text{left: 285px;opacity: 0;-webkit-transition: all .7s ease-out;}
+.text-1{
+	width: 400px;
+	height: 240px;
+	background: url(img/caption.png);
+	top: 140px;
+}
+.text-2{top: 400px;}
+.text-3{top: 430px;}
+
+@-webkit-keyframes duang{
+	0%{-webkit-transform:rotate(0deg);}
+	5%{-webkit-transform:rotate(15deg);}
+	10%{-webkit-transform:rotate(0deg);}
+	15%{-webkit-transform:rotate(-15deg);}
+	20%{-webkit-transform:rotate(0deg);}
+	25%{-webkit-transform:rotate(15deg);}
+	30%{-webkit-transform:rotate(0deg);}
+	35%{-webkit-transform:rotate(-15deg);}
+	40%{-webkit-transform:rotate(0deg);}
+	100%{-webkit-transform:rotate(0deg);}
+}
+
+@-webkit-keyframes t_duang{
+	0%{-webkit-transform:rotate(0deg);}
+	5%{-webkit-transform:rotate(9deg);}
+	10%{-webkit-transform:rotate(0deg);}
+	15%{-webkit-transform:rotate(-9deg);}
+	20%{-webkit-transform:rotate(0deg);}
+	25%{-webkit-transform:rotate(6deg);}
+	30%{-webkit-transform:rotate(0deg);}
+	35%{-webkit-transform:rotate(-6deg);}
+	40%{-webkit-transform:rotate(0deg);}
+	45%{-webkit-transform:rotate(3deg);}
+	50%{-webkit-transform:rotate(0deg);}
+	55%{-webkit-transform:rotate(-3deg);}
+	60%{-webkit-transform:rotate(0deg);}
+	100%{-webkit-transform:rotate(0deg);}
+}

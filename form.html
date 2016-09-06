@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{margin: 0;padding: 0;}
+	#one{height: 100px;background-color: #333;position: absolute;width: 100%;}
+	#two{
+		display: inline-block;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 50px;
+	}
+	form{background-color: #fff;height: 30px;margin-top: 20px;margin-left: 20px;width: 50%;position: relative;}
+	input[type=text]{
+		line-height: 30px;
+		height: 100%;
+		padding-left: 5px;
+		border-width: 0;
+		line-height: 30px;
+		width: 100%;
+		outline: none;
+	}
+	input[type=submit]{
+		height: 100%;
+		position: absolute;
+		right: 0;
+		width: 50px;
+		border-width: 0px;
+		background-color: #666;
+	}
+	</style>
+</head>
+<body>
+	<div id="one">
+		<form>
+			<div id="two"><input type="text"></div>
+			<input type="submit" value="提交">	
+		</form>
+	</div>
+</body>
+</html>
